@@ -1,0 +1,24 @@
+#! /bin/bash
+cd ~/bin
+pwd
+echo '=================='
+echo '   help'
+echo '=================='
+ls *help
+echo '=================='
+echo '   go'
+echo '=================='
+ls *go
+echo '=================='
+echo '   start'
+echo '=================='
+ls *start
+echo '=================='
+echo '   stop'
+echo '=================='
+ls *stop
+echo '=================='
+echo '   eb'
+echo '=================='
+ls eb*
+
