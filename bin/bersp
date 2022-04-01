@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'bundle exec rails s -e production'
+bundle exec rails s -e production
+

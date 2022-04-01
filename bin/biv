@@ -1,0 +1,3 @@
+#! /bin/bash
+echo 'bundle install --path=vendor/bundle'
+bundle install --path=vendor/bundle

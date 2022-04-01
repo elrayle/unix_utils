@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'bundle exec rails s -p 3003'
+bundle exec rails s -p 3003
+

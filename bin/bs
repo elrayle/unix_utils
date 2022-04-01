@@ -1,0 +1,3 @@
+#! /bin/bash
+echo 'bundle info $1'
+bundle info $1
