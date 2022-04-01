@@ -1,0 +1,6 @@
+#! /bin/bash
+echo 'Setup upstream for branch $1 to repo $2'
+[[ -z "$1"  ]] && { echo "First Parameter is required and should be the local branch (e.g. `main`)" ; exit 1; }
+[[ -z "$2"  ]] && { echo "Second Parameter is required and should be the git clone URL (e.g. `git@github.com:projectblacklight/spotlight.git`)" ; exit 1; }
+echo 'AFTER PARAM CHECK'
+

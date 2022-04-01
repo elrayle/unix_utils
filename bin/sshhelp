@@ -1,0 +1,27 @@
+#! /bin/bash
+echo '=================================='
+echo 'generate ssh key using... '
+echo '  NOTE:'
+echo '    * key-name usually identifies the app it works with or other purpose of the key (e.g. github-deploy, esmis, aws-eb2)'
+echo '    * record the passphrase.  You will need it when you add the agent.'
+echo '=================================='
+echo 'cd ~/.ssh'
+echo 'ssh-keygen -t ed25519 -C "_YOUR_EMAIL_@example.com"'
+echo 'prompt for location: ~/.ssh/key-name'
+echo 'prompt for passphrase: ANY_PHRASE'
+echo ' '
+echo '----------------------------------'
+echo 'creates files...
+echo '----------------------------------'
+echo 'private key in ~/.ssh/key-name'
+echo 'public key in ~/.ssh/key-name.pub'
+echo ' '
+echo '----------------------------------'
+echo 'add agent using...
+echo '----------------------------------'
+echo 'ssh-add ~/.ssh/key-name'
+echo 'prompt for passphrase: SAME PHRASE USED WHEN CREATING THE KEY'
+echo '# list the keys to confirm it was added'
+echo 'ssh-add -l'
+echo ' '
+

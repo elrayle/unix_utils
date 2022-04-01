@@ -1,0 +1,9 @@
+#! /bin/bash
+echo '----------------------------------'
+echo 'build long regex pattern'
+echo '----------------------------------'
+echo "msg1 = 'start of long message'"
+echo "opts = '(Foo and Bar|Bar and Foo)'"
+echo 'regex = /#{msg1}#{opts}/' 
+echo '----------------------------------'
+

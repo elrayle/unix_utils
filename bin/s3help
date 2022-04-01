@@ -1,0 +1,8 @@
+#! /bin/bash
+echo '=================================='
+echo '-----------list on aws s3'
+echo 'aws s3 ls s3://appname-data-prod/uploads/another_dir/'
+echo '-----------copy from aws s3 to local dir recursively'
+echo 'aws s3 cp s3://appname-data-prod/uploads/another_dir/ public/uploads/spotlight --recursive'
+echo '=================================='
+
