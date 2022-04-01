@@ -1,0 +1,3 @@
+#! /bin/bash
+echo 'Determine Image Magick version by checking `convert -version`'
+convert -version

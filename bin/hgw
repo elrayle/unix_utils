@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'rails generate hyrax:work $1'
+rails generate hyrax:work $1
+

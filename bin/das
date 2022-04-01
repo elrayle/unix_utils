@@ -1,0 +1,3 @@
+#! /bin/bash
+echo 'bin/rails hyrax:default_admin_set:create'
+bin/rails hyrax:default_admin_set:create

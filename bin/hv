@@ -1,0 +1,10 @@
+#! /bin/bash
+echo '--------------------------- application info'
+echo "$(echo 'pwd: ')" "$(pwd)"
+echo "$(echo 'branch: ')" "$(git branch | grep '*')"
+echo '--------------------------- versions'
+echo "$(echo 'hyrax version: ')" "$(grep 'hyrax (' Gemfile.lock)" 
+echo "$(echo 'ruby version: ')" "$(ruby -v)"
+echo "$(echo 'rails version:')" "$(rails -v 2>/dev/null)"
+echo "$(echo 'solr ')" "$(grep version .solr_wrapper.yml)"
+

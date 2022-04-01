@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'rails new $1  -m https://raw.githubusercontent.com/samvera/hyrax/v2.0.0.beta4/template.rb'
+rails new $1  -m https://raw.githubusercontent.com/samvera/hyrax/v2.0.0.beta4/template.rb
+

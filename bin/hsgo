@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'bin/rails hydra:server'
+bin/rails hydra:server
+

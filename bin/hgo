@@ -1,0 +1,6 @@
+echo 'rake db:migrate'
+rake db:migrate
+echo 'rake hyrax:workflow:load'
+rake hyrax:workflow:load
+echo 'rake hyrax:default_admin_set:create'
+rake hyrax:default_admin_set:create

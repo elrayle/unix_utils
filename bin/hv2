@@ -1,0 +1,14 @@
+#! /bin/bash
+echo '--------------------------- pwd'
+pwd
+echo '--------------------------- branch'
+git branch | grep '*'
+echo '--------------------------- hyrax version'
+grep 'hyrax (' Gemfile.lock 
+echo '--------------------------- ruby version'
+ruby -v
+echo '--------------------------- rails version'
+rails -v 2>/dev/null
+echo '--------------------------- solr version'
+grep version .solr_wrapper.yml
+
