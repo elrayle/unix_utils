@@ -1,0 +1,5 @@
+#! /bin/bash
+echo "git branch"
+git branch
+echo "Running RSPEC tests..."
+bundle exec rspec $1

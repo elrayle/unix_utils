@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'Run in rails app'
+echo 'bundle exec rake db:migrate'
+bundle exec rake db:migrate

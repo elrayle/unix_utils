@@ -1,0 +1,6 @@
+#! /bin/bash
+echo 'copying seed file'
+bin/rails generate hyrax:sample_data
+echo 'rake db:seed'
+rake db:seed
+

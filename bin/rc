@@ -1,0 +1,6 @@
+#! /bin/bash
+pwd
+git branch
+echo 'rubocop $1'
+bundle exec rubocop $1
+

@@ -1,0 +1,2 @@
+#! /bin/bash
+bundle exec rspec $1 --format html --out tmp/rspec_results.html
