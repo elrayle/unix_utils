@@ -1,0 +1,12 @@
+[user]
+	name = _REPLACE_WITH_YOUR_NAME_
+	email = _REPLACE_WITH_YOUR_EMAIL_
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[url "https://"]
+  insteadOf = git://
+[core]
+	excludesfile = /Users/_USER_/.gitignore
+[init]
+	defaultBranch = main

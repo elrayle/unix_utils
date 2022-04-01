@@ -1,0 +1,12 @@
+Looks like phantomjs was downloaded and installed in this directory.
+
+Expected Files:
+  > 2.11/darwin
+    > bin
+      - phantomjs
+    > examples
+      - lots of examples
+  - ChangeLog
+  - LICENSE.BSD
+  - README.md
+  - third-party.txt

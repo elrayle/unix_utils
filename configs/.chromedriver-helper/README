@@ -1,0 +1,7 @@
+Looks like chromedriver was downloaded and installed in this directory.
+
+Expected Files:
+  > 2.37/mac
+    - chromedriver
+    - chromedriver_mac64.zip
+  - .chromedriver-version

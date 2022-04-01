@@ -1,0 +1,19 @@
+.byebug_history
+
+# IDE files
+.idea
+
+# rvm settings
+.ruby-gemset
+.ruby-version
+
+# bundler in app
+vendor/bundle
+
+# OS Mac
+.DS_Store
+.DS_Store?
+._*
+
+*.gem
+
