@@ -1,0 +1,3 @@
+#! /bin/bash
+echo 'bundle exec rake engine_cart:clean'
+bundle exec rake engine_cart:clean
