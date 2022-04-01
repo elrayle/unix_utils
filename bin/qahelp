@@ -1,0 +1,10 @@
+#! /bin/bash
+echo '----------------------------------'
+echo 'Startup Process'
+echo '----------------------------------'
+echo '--- from anywhere ---'
+echo 'msgo'
+echo '--- from root of app ---'
+echo 'rails s'
+echo '----------------------------------'
+

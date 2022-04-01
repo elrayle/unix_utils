@@ -1,0 +1,7 @@
+#! /bin/bash
+echo '-------------------------------------'
+echo 'view query being generated'
+echo '-------------------------------------'
+echo '# from the search builder instance (e.g. builder)'
+echo 'builder.query'
+

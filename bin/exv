@@ -1,0 +1,4 @@
+#! /bin/bash
+grep 'Cornell Exhibits v' app/views/shared/_footer.html.erb
+grep 'Spotlight v' app/views/shared/_footer.html.erb
+
