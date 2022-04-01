@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'eb printenv | grep DATABASE'
+eb printenv | grep DATABASE
+
