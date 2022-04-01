@@ -1,0 +1,2 @@
+#! /bin/bash
+/Applications/Fits/fits-0.8.3/fits.sh $0 $1 $2 $3 $4

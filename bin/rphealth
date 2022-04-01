@@ -1,0 +1,14 @@
+echo '----------------------'
+echo 'Verifying redis-server'
+echo 'EXPECT:  root     20263     1  0 08:22 ?        00:00:29 /usr/local/bin/redis-server 0.0.0.0:6379'
+ps -ef | grep redis | grep server
+echo '----------------------'
+echo 'Verifying resque-pool'
+echo 'EXPECT:  _USER_NAME_    25593     1  0 11:53 ?        00:00:09 resque-pool-master[agriknowledge]: managing [25610, 25613, 25617, ...]'
+ps -ef | grep resque | grep pool
+echo '----------------------'
+echo 'Verifying resque-workers'
+echo 'EXPECT many:  _USER_NAME_    25728 25593  0 11:53 ?        00:00:04 resque-1.25.2: Waiting for *'
+ps -ef | grep resque | grep Waiting
+echo '----------------------'
+

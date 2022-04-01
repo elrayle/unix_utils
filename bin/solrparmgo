@@ -1,0 +1,36 @@
+#! /bin/bash
+case $1 in
+    -t ) 
+            COL_NAME="hydra-test"
+            PORT= "-p 8985"
+            RUNPATH="~/Services/solrtest"
+            break
+            ;;
+    -d | -z )
+            COL_NAME="hydra-development"
+            PORT=""
+            RUNPATH="~/Services/solrdev"
+            break
+            ;;
+esac
+
+echo $RUNPATH
+ACTION="install"
+if [ -d ~/Services/solr/bin/solrtest ] && [ -f ~/Services/solr/bin/solrtest ]; then
+  ACTION="run"
+fi
+QUESTION="Continue to "+$ACTION+" in this path? [y|n]"
+while true; do
+    echo $QUESTION
+    read yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer y for yes or n for no.";;
+    esac
+done
+
+cmd = solr_wrapper -d solr/config/ --collection_name $COL_NAME -i /Users/_USER_NAME_/Services/solr $PORT
+echo $cmd
+solr_wrapper -d solr/config/ --collection_name $COL_NAME -i /Users/_USER_NAME_/Services/solr $PORT
+

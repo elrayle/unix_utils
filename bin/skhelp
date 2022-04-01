@@ -1,0 +1,12 @@
+#! /bin/bash
+echo '------------'
+echo '# --- reference for sidekiq and redis'
+echo 'https://medium.com/@josh_works/sidekiq-and-background-jobs-for-beginners-89c95fef786f'
+echo '------------'
+echo '# --- check if sidekiq is running'
+echo 'ps aux | grep sidekiq'
+echo '# --- start sidekiq manually'
+echo 'bundle exec sidekiq -e production'
+echo 'redis-cli shutdown'
+echo '------------'
+

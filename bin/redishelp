@@ -1,0 +1,16 @@
+#! /bin/bash
+echo '------------'
+echo '# --- reference for sidekiq and redis'
+echo 'https://medium.com/@josh_works/sidekiq-and-background-jobs-for-beginners-89c95fef786f'
+echo '------------'
+echo '# --- start redis (in any terminal window)'
+echo 'redis'
+echo '# --- start/stop redis in background '
+echo 'redis-server &'
+echo 'redis-cli shutdown'
+echo '# --- monitor redis'
+echo 'redis-cli monitor'
+echo '# --- monitor only stuff related to sidekiq'
+echo 'redis-cli monitor | grep -E "(hset|lpush)"'
+echo '------------'
+

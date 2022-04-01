@@ -1,0 +1,5 @@
+#! /bin/bash
+echo 'Deleting fedora resource and tombstone for: ' $1
+curl -X DELETE $1
+curl -X DELETE $1/fcr:tombstone
+

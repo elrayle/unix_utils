@@ -1,0 +1,5 @@
+#! /bin/bash
+msstart
+rjstart
+cd spec/internal
+resque-pool --daemon --environment development start

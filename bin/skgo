@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'Start Sidekiq'
+bundle exec sidekiq -d -L log/sidekiq.log -e development
+

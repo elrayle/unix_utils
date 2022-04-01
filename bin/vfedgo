@@ -1,0 +1,4 @@
+#! /bin/bash
+cd /Users/_USER_NAME_/Documents/__DEVELOPMENT__/Samvera/_VALKYRIE_/sprint/valkyrie_active_fedora_
+fcrepo_wrapper --config lib/generators/valkyrie_active_fedora/config/fedora/templates/fcrepo_wrapper_test.yml
+

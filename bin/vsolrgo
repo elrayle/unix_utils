@@ -1,0 +1,5 @@
+#! /bin/bash
+cd /Users/_USER_NAME_/Documents/__DEVELOPMENT__/Samvera/_VALKYRIE_/sprint/valkyrie_active_fedora_
+# solr_wrapper --config lib/generators/valkyrie_active_fedora/config/solr/templates/solr_wrapper_test.yml
+solr_wrapper
+

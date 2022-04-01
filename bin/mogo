@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'moto_server sqs -p 4576'
+moto_server sqs -p 4576
+

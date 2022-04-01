@@ -1,0 +1,80 @@
+#!/bin/sh -e
+# chkconfig: 345 90 10
+# description: resque-pools
+# processname: resque-pools
+
+APP_NAME="xxxx"
+APP_DIR="/cul/web/cals-che-repo-dev.library.cornell.edu/rails-app/agriknowledge"
+PIDFILE="${APP_DIR}/tmp/pids/resque-pool.pid"
+RUN_AS="rails"
+SLEEP_TIME=5
+ENV="development"
+STDOUT="${APP_DIR}/log/resque-pool.log"
+STDERR="${APP_DIR}/log/resque-pool-error.log"
+GEMFILE="BUNDLE_GEMFILE=${APP_DIR}/Gemfile"
+CONFIG="${APP_DIR}/config/resque-pool.yml"
+
+case "$1" in
+    start)
+        if [ -f $PIDFILE ]
+        then
+            echo "$PIDFILE exists, process is already running or crashed"
+        else
+            echo "Starting Resque Pool"
+            /bin/su - ${RUN_AS} -c "cd ${APP_DIR} && ${GEMFILE} \
+            bundle exec resque-pool -d -a ${APP_NAME} -p ${PIDFILE} \
+            -E ${ENV} -o ${STDOUT} -e ${STDERR} --config ${CONFIG}"
+        fi
+    ;;
+    reload)
+        if [ ! -f $PIDFILE ]
+        then
+            echo "$PIDFILE does not exist, process is not running"
+        else
+            echo "Reloading configuration file."
+            cat ${PIDFILE} | xargs kill -s HUP
+        fi
+    ;;
+    graceful-stop)
+        if [ ! -f $PIDFILE ]
+        then
+            echo "$PIDFILE does not exist, process is not running"
+        else
+            echo "Stopping gracefully."
+            cat ${PIDFILE} | xargs kill -s QUIT
+        fi
+    ;;
+    quick-stop)
+        if [ ! -f $PIDFILE ]
+        then
+            echo "$PIDFILE does not exist, process is not running"
+        else
+            echo "Stopping quickly."
+            cat ${PIDFILE} | xargs kill -s INT
+        fi
+    ;;
+    stop)
+        if [ ! -f $PIDFILE ]
+        then
+            echo "$PIDFILE does not exist, process is not running"
+        else
+            echo "Stopping."
+            cat ${PIDFILE} | xargs kill -s TERM
+        fi
+    ;;
+    restart)
+        if [ ! -f $PIDFILE ]
+        then
+            echo "$PIDFILE does not exist, process is not running"
+        else
+            $0 stop
+            sleep ${SLEEP_TIME}
+            $0 start
+        fi
+    ;;
+    *)
+        echo "Usage: $0 {start|stop|graceful-stop|quick-stop|restart|reload}"
+        exit 1
+    ;;
+esac
+

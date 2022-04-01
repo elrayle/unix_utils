@@ -1,0 +1,3 @@
+#! /bin/bash
+resque-pool --daemon --environment development
+rphealth

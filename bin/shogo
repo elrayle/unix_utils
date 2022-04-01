@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'bundle exec shoryuken -R -C config/shoryuken.yml'
+bundle exec shoryuken -R -C config/shoryuken.yml
+
