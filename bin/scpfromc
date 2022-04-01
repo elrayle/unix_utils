@@ -1,0 +1,4 @@
+#! /bin/bash
+# copy file $1 from server home dir to Downloads on laptop
+scp -r userid@app_machine_name.institution.edu:~/$1 ~/Downloads/_FROM_app_name
+

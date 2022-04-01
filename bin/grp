@@ -1,0 +1,5 @@
+#! /bin/bash
+CMD="grep $1 $2 2>/dev/null"
+echo "Will run command:  $CMD"
+eval $CMD
+# grep $1 $2 2>/dev/null

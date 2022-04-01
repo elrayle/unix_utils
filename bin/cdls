@@ -1,0 +1,28 @@
+echo "-------------------
+aliases cd commands
+-------------------
+cdd   -- __DEVELOPMENT__
+
+--- MANN_PROJECTS ---
+cdm   -- MANN_PROJECTS
+cde   -- MANN_PROJECTS/ESMIS/sprint
+cdu   -- MANN_PROJECTS/ESMIS/sprint
+
+--- SAMVERA PROJECTS ---
+cdh   -- Samvera/sprint/hyrax/.internal_test_app
+
+--- OLIN PROJECTS ---
+cdo   -- OLIN_PROJECTS
+cdex  -- OLIN_PROJECTS/sprint/exhibits-library-cornell-edu
+
+--- LD4P4 PROJECTS ---
+cdl   -- _LD4L4
+cdqa  -- samvera/questioning_authority
+cdlqs -- LD4P/qa_server
+cdqsc -- LD4P/qa_server_container
+cdcqs -- cul-it/qa_server
+
+--- Other Projects ---
+cdc   -- Conferences
+cdds  -- docker_shortcuts/script
+"

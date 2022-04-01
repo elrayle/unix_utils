@@ -1,0 +1,9 @@
+#! /bin/bash
+echo 'count matching lines'
+CMD="grep $1 * 2>/dev/null | wc -l"
+echo $CMD
+eval $CMD
+
+# doesn't work with wildcards as they get expanded before the script runs
+# and can cause all sorts of wacky behavior
+# https://stackoverflow.com/questions/11456403/stop-shell-wildcard-character-expansion
