@@ -1,0 +1,5 @@
+#! /bin/bash
+CMD="curl -L -D - -H 'Accept: text/turtle' '$1'"
+echo "$CMD"
+eval $CMD
+

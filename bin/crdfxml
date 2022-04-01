@@ -1,0 +1,5 @@
+#! /bin/bash
+CMD="curl -L -D - -H 'Accept: application/rdf+xml' '$1'"
+echo "$CMD"
+eval $CMD
+
