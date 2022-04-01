@@ -1,0 +1,60 @@
+#! /bin/bash
+echo "---------------------------------
+GitHub - filtering PRs and Issues
+---------------------------------
+Reference:
+----------
+* https://docs.github.com/en/github/searching-for-information-on-github/getting-started-with-searching-on-github/understanding-the-search-syntax
+* https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests#search-by-open-or-closed-state
+
+General:
+--------
+* using a filter twice does an OR
+* preceding with a - excludes PRs matching the filter
+* dates
+  * >  after (e.g. >2021-04-01)
+  * >= on or after
+  * <  before
+  * <= on or before
+  * .. range inclusive (e.g. 2021-04-01..2021-04-30)
+
+Filters:
+--------
+created:YYYY-MM-DD
+updated:YYYY-MM-DD
+closed:YYYY-MM-DD
+merged:YYYY-MM-DD
+
+author:_GH_USER_NAME_
+label:question      # with label question (use quotes if multi-word)
+-label:bug          # without label bug
+
+is:pr
+is:issue
+is:open     
+is:closed     
+is:merged
+is:unmerged
+
+in:title
+in:body
+in:comments
+
+base:dev            # only PRs merging into dev
+head:BRANCH         # PR merging from BRANCH
+
+review:none
+review:approved
+review:changes_requested
+
+no:label
+no:project
+no:assignee
+no:milestone
+
+status:success
+status:failure
+
+project:samvera/hyrax/2
+"
+

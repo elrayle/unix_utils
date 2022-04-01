@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'git rebase -i HEAD~2'
+git rebase -i HEAD~2
+

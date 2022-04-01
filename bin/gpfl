@@ -1,0 +1,4 @@
+#! /bin/bash
+echo 'git push --force-with-lease origin '$1
+git push --force-with-lease origin $1
+
